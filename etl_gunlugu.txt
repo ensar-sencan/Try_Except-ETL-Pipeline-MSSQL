@@ -1,0 +1,35 @@
+--------------------------------------------------- 
+[BASLANGIC] Tarih: �ar 18.02.2026 Saat: 22:59:35,89 
+Traceback (most recent call last):
+  File "C:\Users\Ensar\veri_muhendisligi_yolculugum\TRY-EXCEPT\etl_pro.py", line 6, in <module>
+    print("\U0001f680 ETL S�reci Ba�lat�l�yor...\n")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ensar\anaconda3\Lib\encodings\cp1254.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+[DURUM] HATA OLUSTU! Kod: 1 
+[BITIS] Tarih: �ar 18.02.2026 Saat: 22:59:36,84 
+--------------------------------------------------- 
+--------------------------------------------------- 
+[BASLANGIC] Tarih: �ar 18.02.2026 Saat: 23:01:34,14 
+🚀 ETL Süreci Başlatılıyor...
+
+📥 'yeni_personel.csv' dosyası aranıyor...
+✅ Dosya bulundu! Toplam 5 satır veri var.
+
+🧹 Veri temizliği yapılıyor...
+✅ Temizlik bitti. 2 adet hatalı kayıt elendi.
+        AdSoyad Departman  Yas   Maas    Prim
+0  Ahmet Yilmaz        IT   25  35000  5250.0
+1    Ayse Demir        IK   28  42000  6300.0
+3   Zeynep Veri      Data   30  55000  8250.0
+
+🔌 Veritabanına bağlanılıyor...
+
+🎉 BAŞARILI! Veriler 'Pro_Personel_Listesi' tablosuna güvenle aktarıldı.
+
+🏁 İşlem Sona Erdi.
+[DURUM] BASARILI! 
+[BITIS] Tarih: �ar 18.02.2026 Saat: 23:01:36,36 
+--------------------------------------------------- 

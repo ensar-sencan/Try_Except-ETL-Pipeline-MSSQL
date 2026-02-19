@@ -1,8 +1,14 @@
+import os
+
+from dotenv import load_dotenv
 import requests
 
-# 1. BİLGİLERİNİ BURAYA GİR
-TOKEN = "8211810182:AAG408mteKNxG02so75DHvbgJL_eXSc8l5k" # BotFather'dan aldığın token
-CHAT_ID = "1387971751"  # Not: CHAT_ID'yi öğrenmek için @userinfobot'a mesaj atabilir ve oradan "Your Telegram ID" kısmını görebilirsin.
+# Gizli kasayı (.env) aç
+load_dotenv()
+
+# Şifreleri kasadan güvenli bir şekilde çek
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 # 2. GÖNDERİLECEK MESAJ
 MESAJ = "Python'dan Telegram'a ilk veri füzemiz ulaştı. Sistem aktif! "

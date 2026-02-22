@@ -1,4 +1,4 @@
-# Real-Time Data Engineering Portfolio
+# Real-Time Data Engineering Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)
 ![MSSQL](https://img.shields.io/badge/Microsoft%20SQL%20Server-Data%20Warehouse-red?style=flat&logo=microsoft-sql-server)
@@ -81,12 +81,12 @@ Instead of using the default `sa` (system administrator) account for application
 
 ```sql
 -- Create a dedicated ETL user
-CREATE LOGIN etl_user WITH PASSWORD = 'your_password';
-CREATE USER etl_user FOR LOGIN etl_user;
+CREATE LOGIN KriptoBot_User WITH PASSWORD = 'your_password';
+CREATE USER KriptoBot_User FOR LOGIN KriptoBot_User;
 
 -- Grant only the necessary permissions (read + write on specific tables)
-ALTER ROLE db_datawriter ADD MEMBER etl_user;
-ALTER ROLE db_datareader ADD MEMBER etl_user;
+ALTER ROLE db_datawriter ADD MEMBER KriptoBot_User;
+ALTER ROLE db_datareader ADD MEMBER KriptoBot_User;
 ```
 
 This ensures that even if the application credentials are compromised, the blast radius is limited to data read/write operations only — no schema changes, no administrative access.
